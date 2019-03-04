@@ -1,0 +1,19 @@
+<div class="back-btn">
+  <button (click)="back()">Back</button>
+</div>
+<div class="form-container">
+  <form>
+    <div class="label">Name:</div>
+    <input type="text" name="name" [(ngModel)]="name" placeholder="Name">
+    <div class="label">Phone:</div>
+    <input type="text" name="phone" [(ngModel)]="phone" placeholder="Phone">
+    <div class="details">
+      <div class="title">Subscriber to be added:</div>
+      <div class="name">Name: {{name}}</div>
+      <div class="phone">Phone: {{phone}}</div>
+    </div>
+    <div class="add-btn">
+      <button (click)="addEntry()">Add</button>
+    </div>
+  </form>
+</div>

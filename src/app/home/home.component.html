@@ -1,0 +1,28 @@
+<div class="add-btn">
+  <button (click)="goToAdd()">Add</button>
+</div>
+<div class="name-phone-title">
+  <div class="wrapper">
+    <div class="name">
+      Name
+    </div>
+    <div class="phone">
+      Phone
+    </div>
+  </div>
+</div>
+<div class="entries-container">
+  <div @fadeWithPushDown *ngFor="let subscriber of allSubscribers; let i=index" class="entry">
+    <div class="wrapper">
+      <div class="entry-name">
+        {{subscriber.name}}
+      </div>
+      <div class="entry-phone">
+        {{subscriber.phone}}
+      </div>
+      <div class="delete-btn">
+        <button (click)="delete(i)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
